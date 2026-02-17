@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://csx3566dtjd46"]
+
+[ext_resource type="Script" uid="uid://dyu75ar0p283a" path="res://home_scene.gd" id="1_8legq"]
+[ext_resource type="PackedScene" uid="uid://bsndc0vt6t063" path="res://daddy.tscn" id="2_bks2k"]
+[ext_resource type="PackedScene" uid="uid://d3q0orqek1mce" path="res://scene_to_nest_blue.tscn" id="2_vlpdr"]
+
+[node name="HomeScene" type="Node2D" unique_id=173730286]
+script = ExtResource("1_8legq")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1002368919]
+unique_name_in_owner = true
+visible = false
+color = Color(0.23549142, 0.7825047, 1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=45395407]
+offset_right = 1147.0
+offset_bottom = 650.0
+color = Color(0.3347436, 0.33474356, 0.33474356, 1)
+
+[node name="Daddy" parent="." unique_id=1071095350 instance=ExtResource("2_bks2k")]
+unique_name_in_owner = true
+position = Vector2(95.00001, 95)
+scale = Vector2(1.48, 1.48)
+
+[node name="SceneToNestBlue" parent="." unique_id=48235823 instance=ExtResource("2_vlpdr")]
+unique_name_in_owner = true
+y_sort_enabled = true
+position = Vector2(2, 194)
+
+[node name="Control" type="Control" parent="." unique_id=1612785449]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 190.0
+offset_top = 40.0
+offset_right = 230.0
+offset_bottom = 80.0
+
+[node name="Label" type="Label" parent="Control" unique_id=958702639]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 30
+
+[node name="Timer" type="Timer" parent="." unique_id=1976145738]
+unique_name_in_owner = true
+wait_time = 0.5
